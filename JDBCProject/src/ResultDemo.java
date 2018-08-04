@@ -13,7 +13,7 @@ public class ResultDemo {
 			ResultSet rs = con.createStatement().executeQuery(sql);
 			ResultSetMetaData meta = rs.getMetaData();
 			for (int i = 1; i <= meta.getColumnCount(); i++) 
-				System.out.print(meta.getColumnName(i) + "\t");
+				System.out.printf(meta.getColumnName(i) + "\t");
 			System.out.println();
 
 			while (rs.next())
